@@ -86,34 +86,6 @@
                 }                                
             });
 
-            var team3 = firebase.database().ref('3/');
-            team3.on('value', function(snapshot) {
-                var num=Object.keys(snapshot.val()).length;
-                scoreTeam3=0;
-                for(g=0;g<num;g++){
-                    var user=Object.keys(snapshot.val())[g];
-                    var scoreNode = firebase.database().ref('3/'+user+'/score/');
-                    scoreNode.once('value').then(function(snapshot2){
-                        scoreTeam3=scoreTeam3+snapshot2.val();
-                        $("#team3score").html("<h1>"+scoreTeam3+"</h1>");
-                    });
-                }                                
-            });
-
-            var team4 = firebase.database().ref('4/');
-            team4.on('value', function(snapshot) {
-                var num=Object.keys(snapshot.val()).length;
-                scoreTeam4=0;
-                for(m=0;m<num;m++){
-                    var user=Object.keys(snapshot.val())[m];
-                    var scoreNode = firebase.database().ref('4/'+user+'/score/');
-                    scoreNode.once('value').then(function(snapshot2){
-                        scoreTeam4=scoreTeam4+snapshot2.val();
-                        $("#team4score").html("<h1>"+scoreTeam4+"</h1>");
-                    });
-                }                                
-            });
-
            
         </script>
     </body>
