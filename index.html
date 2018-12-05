@@ -46,12 +46,14 @@
         <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
         <script>  
         // Initialize Firebase
-        var config = {
-                apiKey: //ใส่ API KEY ตรงนี้,
-                authDomain: //ใส่ authDomain ตรงนี้,
-                databaseURL: //ใส่ Database URL ตรงนี้,
-                projectId: //ใส่ projectID ตรงนี้,
-            };
+  var config = {
+    apiKey: "AIzaSyB4sLhvX8gY01odWFk4ygjjczeyVivBiCU",
+    authDomain: "shakeit-f8cbf.firebaseapp.com",
+    databaseURL: "https://shakeit-f8cbf.firebaseio.com",
+    projectId: "shakeit-f8cbf",
+    storageBucket: "shakeit-f8cbf.appspot.com",
+    messagingSenderId: "160567212903"
+  };
         firebase.initializeApp(config);
         startGame=0;
         liff.init(
