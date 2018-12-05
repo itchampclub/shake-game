@@ -66,6 +66,7 @@
                     uid:userId
                 },function(result){
                     var obj=JSON.parse(result);
+                    var team=2;
                     if(obj.code==200){
                         localStorage.setItem('userId', userId);
                         localStorage.setItem('team', obj.team);
